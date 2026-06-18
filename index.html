@@ -148,24 +148,42 @@
     margin:0.5rem 0;
   }
 
- .gallery-grid{
+  .gallery-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:1.2rem;
   }
-  .gallery-grid .video-wrap{
-    background:#000;
+  .gallery-grid .video-card{
+    background:linear-gradient(135deg,#2b2b2b,#1a1a1a);
     border-radius:16px;
     overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
     aspect-ratio:9/16;
-    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:1.5rem;
+    text-decoration:none;
+    color:#fff;
+    transition:transform 0.2s;
   }
-  .gallery-grid .video-wrap iframe{
-    width:100%;
-    height:100%;
-    border:none;
-    display:block;
+  .gallery-grid .video-card:hover{
+    transform:translateY(-4px) scale(1.02);
+  }
+  .gallery-grid .video-card .play-icon{
+    font-size:3rem;
+    margin-bottom:0.8rem;
+  }
+  .gallery-grid .video-card .label{
+    font-weight:700;
+    font-size:1.05rem;
+    margin-bottom:0.4rem;
+  }
+  .gallery-grid .video-card .sub{
+    font-size:0.8rem;
+    opacity:0.75;
   }
 
   footer{
@@ -262,18 +280,26 @@
 <section id="gallery">
   <h2>ผลงานล่าสุด</h2>
   <div class="gallery-grid">
-    <div class="video-wrap">
-      <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F780253781721651&show_text=false" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-    <div class="video-wrap">
-      <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1672670740616866&show_text=false" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-    <div class="video-wrap">
-      <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F978228678286875&show_text=false" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-    <div class="video-wrap">
-      <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1789515795756219&show_text=false" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
+    <a class="video-card" href="https://www.facebook.com/reel/780253781721651" target="_blank" rel="noopener">
+      <div class="play-icon">▶️</div>
+      <div class="label">ผลงานที่ 1</div>
+      <div class="sub">ดูคลิปบน Facebook</div>
+    </a>
+    <a class="video-card" href="https://www.facebook.com/reel/1672670740616866" target="_blank" rel="noopener">
+      <div class="play-icon">▶️</div>
+      <div class="label">ผลงานที่ 2</div>
+      <div class="sub">ดูคลิปบน Facebook</div>
+    </a>
+    <a class="video-card" href="https://www.facebook.com/reel/978228678286875" target="_blank" rel="noopener">
+      <div class="play-icon">▶️</div>
+      <div class="label">ผลงานที่ 3</div>
+      <div class="sub">ดูคลิปบน Facebook</div>
+    </a>
+    <a class="video-card" href="https://www.facebook.com/reel/1789515795756219" target="_blank" rel="noopener">
+      <div class="play-icon">▶️</div>
+      <div class="label">ผลงานที่ 4</div>
+      <div class="sub">ดูคลิปบน Facebook</div>
+    </a>
   </div>
 </section>
 
